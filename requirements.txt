@@ -9,5 +9,9 @@ faiss-cpu
 pandas
 matplotlib
 PyMuPDF
+PyPDF2
+langchainhub
 langchain-community
 langchain-openai
+PyPDF
+pypdf
