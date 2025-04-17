@@ -1,4 +1,11 @@
 streamlit
-streamlit-authenticator
-PyYAML
-
+pymongo
+python-dotenv
+streamlit-option-menu
+langchain
+openai
+pydantic
+faiss-cpu
+pandas
+matplotlib
+PyMuPDF
