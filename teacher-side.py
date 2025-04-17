@@ -23,10 +23,9 @@ import matplotlib.pyplot as plt
 load_dotenv()
 
 # MongoDB connection
-CONNECTION_STRING = st.secrets("MONGO_URI")
-if not CONNECTION_STRING:
-    st.error("MongoDB connection string not found. Please set it in the .env file.")
-    st.stop()
+CONNECTION_STRING = st.secrets["MONGO_URI"]
+st.error("MongoDB connection string not found. Please set it in the .env file.")
+st.stop()
 
 client = MongoClient(CONNECTION_STRING)
 quiz_db = client["quiz-db"]
@@ -161,7 +160,7 @@ if selected == "📝 Quiz Generation" and st.session_state.logged_in:
         st.stop()
     
     # Initialize LLM
-    llm = ChatOpenAI(model="gpt-4", api_key=st.secrets("OPENAI_API_KEY"))
+    llm = ChatOpenAI(model="gpt-4", api_key=st.secrets["OPENAI_API_KEY"])
 
     # Embeddings    
     from langchain.embeddings.openai import OpenAIEmbeddings
